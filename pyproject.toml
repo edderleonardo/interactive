@@ -1,0 +1,35 @@
+
+# ==== Ruff ====
+[tool.ruff]
+line-length = 120
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+ignore = ["F401"]
+
+[tool.ruff.format]
+# 5. Use single quotes for non-triple-quoted strings.
+quote-style = "single"
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint.isort]
+force-single-line = true
+force-to-top = ["src"]
+known-first-party = ["src"]
+lines-after-imports = 2
+lines-between-types = 1
+ force-sort-within-sections = true
+from-first = false
+length-sort = true
