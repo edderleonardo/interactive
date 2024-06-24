@@ -53,7 +53,7 @@ docker compose -f local.yml run --rm server pytest
 ##  Descripción de los endpoints
 
 ### GET /create_grimorios_fixtures_create_grimorios_fixtures
-- Crea los grimorios de prueba.
+- Crea los grimorios de prueba. IMPORTANTE: Este endpoint es el primero que se debe correr para poder crear los grimorios
 
 ### GET /solicitudes
 - Devuelve todas las solicitudes.
@@ -71,7 +71,7 @@ docker compose -f local.yml run --rm server pytest
 - Crea una solicitud.
 
 ### PATCH /solicitud/{uuid}/status
-- Actualiza el estado de una solicitud.
+- Actualiza el estado de una solicitud. Cuando el status es aceptado, se crea una asignación para un grimorio. 
 
 ### GET /asignaciones
 - Devuelve todas las asignaciones.
